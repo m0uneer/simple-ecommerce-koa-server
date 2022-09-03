@@ -1,0 +1,19 @@
+node_modules
+.DS_Store
+.env
+
+# Test coverage generated files
+coverage
+
+# IDEs generated files
+.idea
+.history
+.vscode
+
+#logs
+logs
+
+#files
+/config/local*
+/public/local-storage
+db.sqlite

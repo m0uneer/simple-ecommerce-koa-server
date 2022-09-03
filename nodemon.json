@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "ignore": [
+    "**/**test**",
+    "**/logs",
+    "node_modules"
+  ],
+  "events": {
+    "restart": "kill-port 4000; node -e 'require(\"inspector\").close();'",
+    "crash": "kill-port 4000; node -e 'require(\"inspector\").close();'"
+  },
+  "delay": 1000
+}

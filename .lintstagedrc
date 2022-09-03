@@ -1,0 +1,8 @@
+{
+  "**/*.js": [
+     "eslint"
+  ],
+  "readme.md": [
+     "npm run lint-md"
+  ]
+}

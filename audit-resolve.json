@@ -1,0 +1,30 @@
+{
+  "decisions": {
+    "1081673|koa-passport>passport": {
+      "decision": "fix",
+      "madeAt": 1662435516013
+    },
+    "1067342|config>json5>minimist": {
+      "decision": "ignore",
+      "madeAt": 1662435681800,
+      "expiresAt": 1665027667161
+    },
+    "1084253|sequelize>moment-timezone": {
+      "decision": "ignore",
+      "madeAt": 1662435690733,
+      "expiresAt": 1665027667161
+    },
+    "1084254|sequelize>moment-timezone": {
+      "decision": "ignore",
+      "madeAt": 1662435690734,
+      "expiresAt": 1665027667161
+    },
+    "1070480|multer>busboy>dicer": {
+      "decision": "ignore",
+      "madeAt": 1662435663378,
+      "expiresAt": 1665027379793
+    }
+  },
+  "rules": {},
+  "version": 1
+}
