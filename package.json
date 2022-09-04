@@ -105,6 +105,7 @@
     "remark-preset-lint-recommended": "^3.0.3",
     "semantic-release": "^17.0.8",
     "sequelize-cli": "^6.2.0",
+    "sequelize-mock": "^0.10.2",
     "sqlite3": "^4.1.0"
   },
   "config": {
