@@ -1,6 +1,6 @@
 {
   "name": "simple-ecommerce-koa-server",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Simple ecommerce koa server",
   "main": "index.js",
   "engines": {
