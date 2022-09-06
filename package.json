@@ -11,7 +11,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "start-heroku": "node heroku.js",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint-md": "remark .",
     "eslint": "eslint '**/*.js' --fix",
     "codecov": "codecov",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:m0uneer/simple-ecommerce-koa-server.git"
+    "url": "https://github.com/m0uneer/simple-ecommerce-koa-server.git"
   },
   "author": "m.m.mouneer@gmail.com",
   "license": "ISC",
@@ -79,7 +79,7 @@
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@shopify/jest-koa-mocks": "^3.0.1",
     "co-compose": "^6.1.3",
-    "codecov": "^3.7.0",
+    "codecov": "^3.8.3",
     "commitizen": "^4.1.2",
     "commitlint-plugin-function-rules": "^1.1.20",
     "cz-conventional-changelog": "^3.2.0",
