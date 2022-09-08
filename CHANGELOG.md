@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/m0uneer/simple-ecommerce-koa-server/compare/v1.0.0...v1.1.0) (2022-09-08)
+
+
+### Features
+
+* 🎸 [#2](https://github.com/m0uneer/simple-ecommerce-koa-server/issues/2) Enable Heroku auto deployment and adding What is included at the README ([90960cf](https://github.com/m0uneer/simple-ecommerce-koa-server/commit/90960cf862cac9ca1729d1c7aee99e721ba86c83)), closes [#3](https://github.com/m0uneer/simple-ecommerce-koa-server/issues/3)
+
 # 1.0.0 (2022-09-06)
 
 
