@@ -41,10 +41,6 @@ module.exports = {
 
       if (info instanceof jwt.TokenExpiredError) {
         ctx.body = Result.unauthorized('Token Expired!')
-
-        // To fix the weird behavior on Heroku when responding with err on file uploads requests.
-        // Error https://devcenter.heroku.com/articles/error-codes#h18-server-request-interrupted
-        ctx.res.end()
         return
       }
 
