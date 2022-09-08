@@ -1,8 +1,9 @@
-name: CI/CD Pipeline
+name: Default Pipeline
 
 on:
+  workflow_dispatch:
   push:
-    branches:
+    branches-ignore:
       - master
 
 jobs:
@@ -18,12 +19,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
         with:
-          fetch-depth: 0
-
-          # Personal token with repo permission to allow semantic-release pushing on protected branches
-          # Create a test Github user, add him to the repo as admin and use his personal token
-          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
-          persist-credentials: false
+          fetch-depth: 3
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -44,8 +40,3 @@ jobs:
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
-
-      - name: Semantic releasing
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
-        run: npm run semantic-release
