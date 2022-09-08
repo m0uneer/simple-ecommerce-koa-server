@@ -16,4 +16,6 @@ logs
 #files
 /config/local*
 /public/local-storage
+/public/dist
 db.sqlite
+/npm-debug.log

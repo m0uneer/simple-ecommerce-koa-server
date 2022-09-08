@@ -1,6 +1,9 @@
 name: CI/CD Pipeline
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -15,7 +18,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@master
         with:
-          fetch-depth: 2
+          fetch-depth: 0
+
+          # Personal token with repo permission to allow semantic-release pushing on protected branches
+          # Create a test Github user, add him to the repo as admin and use his personal token
+          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
+          persist-credentials: false
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -39,5 +47,5 @@ jobs:
 
       - name: Semantic releasing
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
         run: npm run semantic-release

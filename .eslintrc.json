@@ -1,56 +1,95 @@
 {
-    "env": {
-        "es6": true,
-        "node": true,
-        "jest": true
-    },
-    "extends": [
-        "standard",
-        "plugin:jest/style",
-        "plugin:jest/recommended"
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": [
+    "/public/dist"
+  ],
+  "extends": [
+    "standard",
+    "plugin:jest/style",
+    "plugin:jest/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "page": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "plugins": [
+    "jest",
+    "unicorn"
+  ],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
     ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly",
-        "page": true
-    },
-    "parser": "@babel/eslint-parser",
-    "parserOptions": {
-        "ecmaVersion": 2018,
-        "sourceType": "module",
-        "requireConfigFile": false
-    },
-    "plugins": ["jest", "unicorn"],
-    "rules": {
-      "max-len": ["error", { "code": 100 }],
-      "no-cond-assign": ["error", "always"],
-      "unicorn/filename-case": ["error", { "case": "kebabCase" }],
-      "unicorn/prefer-add-event-listener": ["error"],
-      "prefer-const": "error",
-      "prefer-arrow-callback": "error",
-      "no-var": "error",
-      "implicit-arrow-linebreak": ["error", "beside"],
-      "object-shorthand": "error",
-      "prefer-object-spread": "error",
-      "prefer-spread": "error",
-      "prefer-rest-params": "error",
-      "no-return-await": "error",
-      "no-await-in-loop": "error",
-      "require-await": "error",
-      "import/newline-after-import": "error",
-      "padding-line-between-statements": [
-        "error",
-        { "blankLine": "always", "prev": "block-like", "next": "*" },
-        { "blankLine": "always", "prev": "multiline-var", "next": "*" },
-        { "blankLine": "always", "prev": "multiline-expression", "next": "*" }
-      ],
-      "lines-around-comment": ["error", {
+    "no-cond-assign": [
+      "error",
+      "always"
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ],
+    "unicorn/prefer-add-event-listener": [
+      "error"
+    ],
+    "prefer-const": "error",
+    "prefer-arrow-callback": "error",
+    "no-var": "error",
+    "implicit-arrow-linebreak": [
+      "error",
+      "beside"
+    ],
+    "object-shorthand": "error",
+    "prefer-object-spread": "error",
+    "prefer-spread": "error",
+    "prefer-rest-params": "error",
+    "no-return-await": "error",
+    "no-await-in-loop": "error",
+    "require-await": "error",
+    "import/newline-after-import": "error",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "block-like",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "multiline-var",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "multiline-expression",
+        "next": "*"
+      }
+    ],
+    "lines-around-comment": [
+      "error",
+      {
         "beforeBlockComment": true,
         "beforeLineComment": true,
         "allowBlockStart": true,
         "allowClassStart": true,
         "allowObjectStart": true,
         "allowArrayStart": true
-      }]
-    }
+      }
+    ]
+  }
 }
