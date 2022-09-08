@@ -6,7 +6,6 @@ const { promisify } = require('util')
 const AuthenticatedUrls = require('./authenticated-urls')
 const Result = require('../../../lib/response/result')
 const User = require('../models/user')
-const Status = require('../../../lib/response/status')
 
 module.exports = {
   middleware (ctx, next) {
