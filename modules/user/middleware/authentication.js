@@ -6,6 +6,7 @@ const { promisify } = require('util')
 const AuthenticatedUrls = require('./authenticated-urls')
 const Result = require('../../../lib/response/result')
 const User = require('../models/user')
+const Status = require('../../../lib/response/status')
 
 module.exports = {
   middleware (ctx, next) {
@@ -40,7 +41,13 @@ module.exports = {
       }
 
       if (info instanceof jwt.TokenExpiredError) {
+        // To fix the weird behavior on Heroku when responding with err on file uploads requests.
+        // Error https://devcenter.heroku.com/articles/error-codes#h18-server-request-interrupted
         ctx.body = Result.unauthorized('Token Expired!')
+
+        ctx.res.destroy()
+
+        // ctx.res.end()
         return
       }
 
